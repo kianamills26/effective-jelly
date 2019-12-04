@@ -1,0 +1,287 @@
+{
+    "____comment": "This file was generated with eosio-abigen. DO NOT EDIT ",
+    "version": "eosio::abi/1.1",
+    "types": [
+        {
+            "new_type_name": "address_t",
+            "type": "address"
+        },
+        {
+            "new_type_name": "language_t",
+            "type": "language"
+        },
+        {
+            "new_type_name": "platform_t",
+            "type": "platform"
+        }
+    ],
+    "structs": [
+        {
+            "name": "address",
+            "base": "",
+            "fields": [
+                {
+                    "name": "city",
+                    "type": "string"
+                },
+                {
+                    "name": "state",
+                    "type": "string"
+                },
+                {
+                    "name": "country",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "canceloffer",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "assetids",
+                    "type": "uint64[]"
+                }
+            ]
+        },
+        {
+            "name": "claim",
+            "base": "",
+            "fields": [
+                {
+                    "name": "claimer",
+                    "type": "name"
+                },
+                {
+                    "name": "assetids",
+                    "type": "uint64[]"
+                }
+            ]
+        },
+        {
+            "name": "create",
+            "base": "",
+            "fields": [
+                {
+                    "name": "author",
+                    "type": "name"
+                },
+                {
+                    "name": "category",
+                    "type": "name"
+                },
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "idata",
+                    "type": "string"
+                },
+                {
+                    "name": "mdata",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "delegate",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "assetids",
+                    "type": "uint64[]"
+                },
+                {
+                    "name": "period",
+                    "type": "uint64"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "language",
+            "base": "",
+            "fields": [
+                {
+                    "name": "lang_code",
+                    "type": "string"
+                },
+                {
+                    "name": "level",
+                    "type": "int32"
+                }
+            ]
+        },
+        {
+            "name": "offer",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "newowner",
+                    "type": "name"
+                },
+                {
+                    "name": "assetids",
+                    "type": "uint64[]"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "platform",
+            "base": "",
+            "fields": [
+                {
+                    "name": "platform",
+                    "type": "string"
+                },
+                {
+                    "name": "url",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "transfer",
+            "base": "",
+            "fields": [
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "to",
+                    "type": "name"
+                },
+                {
+                    "name": "assetids",
+                    "type": "uint64[]"
+                },
+                {
+                    "name": "memo",
+                    "type": "string"
+                }
+            ]
+        },
+        {
+            "name": "undelegate",
+            "base": "",
+            "fields": [
+                {
+                    "name": "owner",
+                    "type": "name"
+                },
+                {
+                    "name": "from",
+                    "type": "name"
+                },
+                {
+                    "name": "assetids",
+                    "type": "uint64[]"
+                }
+            ]
+        },
+        {
+            "name": "userinsert",
+            "base": "",
+            "fields": [
+                {
+                    "name": "user",
+                    "type": "name"
+                },
+                {
+                    "name": "display_name",
+                    "type": "string"
+                },
+                {
+                    "name": "about_me",
+                    "type": "string"
+                },
+                {
+                    "name": "location",
+                    "type": "address_t"
+                },
+                {
+                    "name": "img",
+                    "type": "string"
+                },
+                {
+                    "name": "languages",
+                    "type": "language_t[]"
+                },
+                {
+                    "name": "platforms",
+                    "type": "platform_t[]"
+                }
+            ]
+        }
+    ],
+    "actions": [
+        {
+            "name": "canceloffer",
+            "type": "canceloffer",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "claim",
+            "type": "claim",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "create",
+            "type": "create",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "delegate",
+            "type": "delegate",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "offer",
+            "type": "offer",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "transfer",
+            "type": "transfer",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "undelegate",
+            "type": "undelegate",
+            "ricardian_contract": ""
+        },
+        {
+            "name": "userinsert",
+            "type": "userinsert",
+            "ricardian_contract": ""
+        }
+    ],
+    "tables": [],
+    "ricardian_clauses": [],
+    "variants": []
+}
