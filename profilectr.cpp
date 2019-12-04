@@ -42,68 +42,68 @@ void profilectr::create(name author, name category, name owner, std::string idat
 
 [[eosio::action]]
 void profilectr::claim(name claimer, std::vector< uint64_t >& assetids) {
-    // action(
-    //     permission_level{ get_self(), "active"_n },
-    //     SIMPLEASSETSCONTRACT, "claim"_n,
-    //     std::make_tuple(claimer, assetids)
-    // ).send();
+    action(
+        permission_level{ get_self(), "active"_n },
+        SIMPLEASSETSCONTRACT, "claim"_n,
+        std::make_tuple(claimer, assetids)
+    ).send();
 }
 
 [[eosio::action]]
 void profilectr::transfer(name from, name to, std::vector< uint64_t >& assetids, std::string memo) {
-    // if (assetids.size() == 1) {
-    //     memo = std::string("Transfer one asset");
-    // }
-    // else {
-    //     memo = std::string("Transfer more than one asset");
-    // }
-    // action(
-    //     permission_level{ get_self(), "active"_n },
-    //     SIMPLEASSETSCONTRACT, "transfer"_n,
-    //     std::make_tuple(from, to, assetids, memo)
-    // ).send();
+    if (assetids.size() == 1) {
+        memo = std::string("Transfer one asset");
+    }
+    else {
+        memo = std::string("Transfer more than one asset");
+    }
+    action(
+        permission_level{ get_self(), "active"_n },
+        SIMPLEASSETSCONTRACT, "transfer"_n,
+        std::make_tuple(from, to, assetids, memo)
+    ).send();
 }
 
 [[eosio::action]]
 void profilectr::offer(name owner, name newowner, std::vector< uint64_t >& assetids, std::string memo) {
-    // if (assetids.size() == 1) {
-    //     memo = std::string("Offer one asset");
-    // }
-    // else {
-    //     memo = std::string("Offer more than one asset");
-    // }
-    // action(
-    //     permission_level{ get_self(), "active"_n },
-    //     SIMPLEASSETSCONTRACT, "offer"_n,
-    //     std::make_tuple(owner, newowner, assetids, memo)
-    // ).send();
+    if (assetids.size() == 1) {
+        memo = std::string("Offer one asset");
+    }
+    else {
+        memo = std::string("Offer more than one asset");
+    }
+    action(
+        permission_level{ get_self(), "active"_n },
+        SIMPLEASSETSCONTRACT, "offer"_n,
+        std::make_tuple(owner, newowner, assetids, memo)
+    ).send();
 }
 
 [[eosio::action]]
 void profilectr::canceloffer(name owner, std::vector< uint64_t >& assetids) {
-    // action(
-    //     permission_level{ get_self(), "active"_n },
-    //     SIMPLEASSETSCONTRACT, "canceloffer",
-    //     std::make_tuple(owner, assetids)
-    // ).send();
+    action(
+        permission_level{ get_self(), "active"_n },
+        SIMPLEASSETSCONTRACT, "canceloffer",
+        std::make_tuple(owner, assetids)
+    ).send();
 }
 
 [[eosio::action]]
 void profilectr::delegate(name owner, name to, std::vector< uint64_t >& assetids, uint64_t period, std::string memo) {
-    // action( 
-    //     permission_level{ get_self(), "active"_n },
-    //     SIMPLEASSETSCONTRACT, "delegate"_n,
-    //     std::make_tuple(owner, to, assetids, period, memo)
-    // ).send();
+    action( 
+        permission_level{ get_self(), "active"_n },
+        SIMPLEASSETSCONTRACT, "delegate"_n,
+        std::make_tuple(owner, to, assetids, period, memo)
+    ).send();
 }
 
 [[eosio::action]]
 void profilectr::undelegate(name owner, name from, std::vector< uint64_t >& assetids) {
-    // action(
-    //     permission_level{ get_self(), "active"_n },
-    //     SIMPLEASSETSCONTRACT, "undelegate"_n,
-    //     std::make_tuple(owner, from, assetids)
-    // ).send();
+    action(
+        permission_level{ get_self(), "active"_n },
+        SIMPLEASSETSCONTRACT, "undelegate"_n,
+        std::make_tuple(owner, from, assetids)
+    ).send();
 }
 
 //EOSIO_DISPATCH( profilectr, ( userinsert )() create )( claim )( transfer )( offer )( canceloffer )( delegate )( undelegate ) )
