@@ -1,9 +1,11 @@
-# profilectr
+# Decentralized Profile
+### Everipedia 
+Git: https://github.com/EveripediaNetwork 
 
 # Contract Actions
 
 ```
-userinsert(user, display_name, about_me, location, img, languages, platforms)
+userinsert      (user, display_name, about_me, location, img, languages, platforms)
 ```
 
 ## NFT storage and transfer rom SimpleAssets standard:
